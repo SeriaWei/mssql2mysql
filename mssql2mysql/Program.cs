@@ -26,7 +26,7 @@ namespace mssql2mysql
         [Option(Description = "SQL Server ConnectionString")]
         public string ConnectionString { get; set; }
 
-        [Option(Description = "MySQL Script file name, default: script.sql")]
+        [Option(Description = "MySQL Script file name, default: dump.sql")]
         public string FileName { get; set; }
 
         [Option(Description = "MySQL Schema")]
@@ -37,7 +37,7 @@ namespace mssql2mysql
             {
                 return 1;
             }
-            FileName = FileName ?? "script.sql";
+            FileName = FileName ?? "dump.sql";
             using (FileStream fileStream = new FileStream(FileName, FileMode.Create))
             {
                 using (StreamWriter writer = new StreamWriter(fileStream))
@@ -47,7 +47,8 @@ namespace mssql2mysql
                     writer.WriteLine();
                     if (Schema != null)
                     {
-                        writer.WriteLine($"CREATE DATABASE  IF NOT EXISTS `{Schema}`");
+                        writer.WriteLine($"CREATE DATABASE  IF NOT EXISTS `{Schema}` /*!40100 DEFAULT CHARACTER SET latin1 */;");
+                        writer.WriteLine($"USE `{Schema}`;");
                         writer.WriteLine();
                     }
                     writer.WriteLine("SET FOREIGN_KEY_CHECKS=0;");

@@ -14,7 +14,7 @@ mssql2mysql -c "Server=(local);Database=ZKEACMS;User Id=sa;Password=sa;MultipleA
 
 Use `-f` to specify the output filename
 ```
-mssql2mysql -f mysql.sql -c "Server=(local);Database=ZKEACMS;User Id=sa;Password=sa;"
+mssql2mysql -f dump.sql -c "Server=(local);Database=ZKEACMS;User Id=sa;Password=sa;"
 ```
 
 Use `-s` if you want to include create schema
