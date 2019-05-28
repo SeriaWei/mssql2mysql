@@ -14,10 +14,10 @@ mssql2mysql -c "Server=(local);Database=ZKEACMS;User Id=sa;Password=sa;MultipleA
 
 Use `-f` to specify the output filename
 ```
-mssql2mysql -f mysql.sql -c "Server=(local);Database=ZKEACMS;User Id=sa;Password=sa;MultipleActiveResultSets=true;"
+mssql2mysql -f mysql.sql -c "Server=(local);Database=ZKEACMS;User Id=sa;Password=sa;"
 ```
 
 Use `-s` if you want to include create schema
 ```
-mssql2mysql -s ZKEACMS -c "Server=(local);Database=ZKEACMS;User Id=sa;Password=sa;MultipleActiveResultSets=true;"
+mssql2mysql -s ZKEACMS -c "Server=(local);Database=ZKEACMS;User Id=sa;Password=sa;"
 ```
