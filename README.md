@@ -1,5 +1,5 @@
 # Microsoft SQL Server to MySQL
-This script is used to generate mysql script from microsoft sql server
+This script is used to generate mysql script(table and data) from microsoft sql server
 
 ## Install
 This is a .NET Core Global Tool and .NET Core SDK is required https://dotnet.microsoft.com/download
