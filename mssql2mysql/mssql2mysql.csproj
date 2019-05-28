@@ -20,7 +20,7 @@
     <PackageTags>mssql,mysql</PackageTags>
     <NeutralLanguage>zh-Hans</NeutralLanguage>
     <PackageIconUrl>https://user-images.githubusercontent.com/6006218/33795905-f7000be4-dd24-11e7-9316-ee4180d247d1.png</PackageIconUrl>
-    <PackageLicense>https://www.zkea.net/licenses</PackageLicense>
+    <PackageLicense>https://github.com/SeriaWei/mssql2mysql/blob/master/LICENSE</PackageLicense>
     
   </PropertyGroup>
 
