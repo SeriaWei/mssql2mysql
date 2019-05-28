@@ -6,7 +6,7 @@ This is a .NET Core Global Tool and .NET Core SDK is required https://dotnet.mic
 ```
 dotnet tool install --global mssql2mysql
 ```
-
+## Generate MySQL Script
 Generate mysql script with MSSQL connection string
 ```
 mssql2mysql -c "Server=(local);Database=ZKEACMS;User Id=sa;Password=sa;MultipleActiveResultSets=true;"
