@@ -299,7 +299,7 @@ namespace mssql2mysql
             Type valueType = value.GetType();
             if (valueType == StringType)
             {
-                return $"'{value.ToString().Replace("'", "''")}'";
+                return $"'{value.ToString().Replace("'", "''").Replace("\"", "\\\"")}'";
             }
             else if (valueType == DateTimeType)
             {
