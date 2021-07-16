@@ -40,7 +40,7 @@ namespace mssql2mysql
             FileName = FileName ?? "dump.sql";
             using (FileStream fileStream = new FileStream(FileName, FileMode.Create))
             {
-                using (StreamWriter writer = new StreamWriter(fileStream))
+                using (StreamWriter writer = new StreamWriter(fileStream, Encoding.UTF8))
                 {
                     writer.WriteLine("/* https://github.com/SeriaWei/mssql2mysql */");
                     writer.WriteLine();
