@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFrameworks>netcoreapp3.1;net5.0</TargetFrameworks>
+    <TargetFramework>net5.0</TargetFramework>
 
     <ToolCommandName>mssql2mysql</ToolCommandName>
 
@@ -13,7 +13,7 @@
 
     <PackAsTool>True</PackAsTool>
     <!--<GeneratePackageOnBuild>True</GeneratePackageOnBuild>-->
-    <Version>0.1.4</Version>
+    <Version>0.1.5</Version>
     <Copyright>ZKEASOFT</Copyright>
     <PackageProjectUrl>https://www.zkea.net</PackageProjectUrl>
     <RepositoryUrl>https://github.com/SeriaWei/mssql2mysql</RepositoryUrl>
@@ -24,8 +24,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.Data.SqlClient" Version="4.8.1" />
-    <PackageReference Include="McMaster.Extensions.CommandLineUtils" Version="3.0.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+    <PackageReference Include="McMaster.Extensions.CommandLineUtils" Version="3.1.0" />
   </ItemGroup>
 
 </Project>
