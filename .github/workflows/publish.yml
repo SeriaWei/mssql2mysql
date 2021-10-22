@@ -1,0 +1,32 @@
+name: Publish
+
+on:
+  push:
+    tags: 
+      - v*
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup dotnet 5.0
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.*
+
+    - name: Build
+      run: dotnet build --configuration Release
+
+    - name: Pack
+      run: |
+        arrTag=(${GITHUB_REF//\// })
+        VERSION="${arrTag[2]}"
+        VERSION="${VERSION//v}"
+        echo "$VERSION"
+        dotnet pack --output artifacts --configuration Release --no-restore --no-build -p:Version=$VERSION
+
+    - name: Publish on NuGet
+      run: dotnet nuget push "artifacts/*.nupkg" --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
