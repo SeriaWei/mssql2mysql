@@ -1,31 +1,38 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>net6.0</TargetFramework>
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFrameworks>net6.0;net7.0;net8.0</TargetFrameworks>
 
-    <ToolCommandName>mssql2mysql</ToolCommandName>
+		<ToolCommandName>mssql2mysql</ToolCommandName>
 
-    <PackageId>mssql2mysql</PackageId>
-    <PackageVersion>0.1.7</PackageVersion>
-    <Authors>ZKEASOFT</Authors>
-    <Description>Generate mysql script from SQL Server</Description>
+		<PackageId>mssql2mysql</PackageId>
+		<PackageVersion>1.0</PackageVersion>
+		<Authors>ZKEASOFT</Authors>
+		<Description>Generate mysql script from SQL Server</Description>
 
-    <PackAsTool>True</PackAsTool>
-    <!--<GeneratePackageOnBuild>True</GeneratePackageOnBuild>-->
-    <Version>0.1.7</Version>
-    <Copyright>ZKEASOFT</Copyright>
-    <PackageProjectUrl>https://www.zkea.net</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/SeriaWei/mssql2mysql</RepositoryUrl>
-    <PackageTags>mssql,mysql</PackageTags>
-    <NeutralLanguage>zh-Hans</NeutralLanguage>
-    <PackageIconUrl>https://user-images.githubusercontent.com/6006218/33795905-f7000be4-dd24-11e7-9316-ee4180d247d1.png</PackageIconUrl>
-    <PackageLicense>https://github.com/SeriaWei/mssql2mysql/blob/master/LICENSE</PackageLicense>    
-  </PropertyGroup>
+		<PackAsTool>True</PackAsTool>
+		<!--<GeneratePackageOnBuild>True</GeneratePackageOnBuild>-->
+		<Version>1.0</Version>
+		<Copyright>ZKEASOFT</Copyright>
+		<PackageProjectUrl>https://www.zkea.net</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/SeriaWei/mssql2mysql</RepositoryUrl>
+		<PackageTags>mssql,mysql</PackageTags>
+		<NeutralLanguage>zh-Hans</NeutralLanguage>
+		<PackageIconUrl>https://user-images.githubusercontent.com/6006218/33795905-f7000be4-dd24-11e7-9316-ee4180d247d1.png</PackageIconUrl>
+		<PackageLicense>https://github.com/SeriaWei/mssql2mysql/blob/master/LICENSE</PackageLicense>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageIcon>icon.png</PackageIcon>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
-    <PackageReference Include="McMaster.Extensions.CommandLineUtils" Version="3.1.0" />
-  </ItemGroup>
+	<ItemGroup>
+		<None Include="../README.md" Pack="true" PackagePath="" />
+		<None Include="icon.png" Pack="true" PackagePath="" />
+	</ItemGroup>
+	
+	<ItemGroup>
+		<PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+		<PackageReference Include="McMaster.Extensions.CommandLineUtils" Version="4.1.0" />
+	</ItemGroup>
 
 </Project>
