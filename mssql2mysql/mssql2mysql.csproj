@@ -31,8 +31,8 @@
 	</ItemGroup>
 	
 	<ItemGroup>
-		<PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
-		<PackageReference Include="McMaster.Extensions.CommandLineUtils" Version="4.1.0" />
+		<PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
+		<PackageReference Include="McMaster.Extensions.CommandLineUtils" Version="4.1.1" />
 	</ItemGroup>
 
 </Project>

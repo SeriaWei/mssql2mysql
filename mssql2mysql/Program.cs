@@ -169,7 +169,7 @@ namespace mssql2mysql
             {
                 return "INT";
             }
-            else if (type == "datetime" || type == "smalldatetime")
+            else if (type == "datetime" || type == "smalldatetime" || type == "datetime2")
             {
                 return "DATETIME";
             }
