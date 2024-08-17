@@ -3,17 +3,13 @@
 	<PropertyGroup>
 		<OutputType>Exe</OutputType>
 		<TargetFrameworks>net6.0;net7.0;net8.0</TargetFrameworks>
-
 		<ToolCommandName>mssql2mysql</ToolCommandName>
-
 		<PackageId>mssql2mysql</PackageId>
-		<PackageVersion>1.0</PackageVersion>
 		<Authors>ZKEASOFT</Authors>
 		<Description>Generate mysql script from SQL Server</Description>
 
 		<PackAsTool>True</PackAsTool>
 		<!--<GeneratePackageOnBuild>True</GeneratePackageOnBuild>-->
-		<Version>1.0</Version>
 		<Copyright>ZKEASOFT</Copyright>
 		<PackageProjectUrl>https://www.zkea.net</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/SeriaWei/mssql2mysql</RepositoryUrl>
@@ -23,6 +19,8 @@
 		<PackageLicense>https://github.com/SeriaWei/mssql2mysql/blob/master/LICENSE</PackageLicense>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageIcon>icon.png</PackageIcon>
+		<PackageVersion>1.1</PackageVersion>
+		<Version>1.1</Version>
 	</PropertyGroup>
 
 	<ItemGroup>
